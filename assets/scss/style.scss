@@ -1,0 +1,69 @@
+@use "./abstract/shared" as *;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    @include typo-regular();
+}
+
+.header{
+    width: $full;
+    height: 5rem;
+    background-color: $secondary;
+    box-shadow: 1px 1px $small $x-small $primary;
+    margin-bottom:$large ;
+    &__nav{
+        width: $full;
+        height: $full;
+        padding: $x-small;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__logo{
+           width: 30%; 
+           height: 80%;
+           background-color: $primary;
+           border: 1px solid black;
+        }
+        &__list{
+            width: 40%;
+            margin: $medium;
+            display: flex;
+            justify-content: space-between;
+            &__text{
+                color: $light-primary;
+            }
+        }
+    }
+}
+
+.footer{
+    width: $full;
+    height: 10rem;
+    background: $secondary;
+    // padding: $small;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    gap:$x-small;
+    &__media{
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+        &__icon{
+            color:$primary;
+            font-size: $large-size;
+            margin: $x-small;
+        }
+    }
+    &__copyright{
+        color: $white;
+        display: flex;
+        flex-direction:column;
+        align-items:center ;
+   }
+}
