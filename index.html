@@ -19,20 +19,56 @@
     <header class="header">
       <nav class="header__nav">
         <div class="header__nav__logo img">
-          <!-- <img src="" alt="logo" /> -->
+          <!-- <img src="./assets/img/garance.png" alt="logo" /> -->
         </div>
         <ul class="header__nav__list">
-          <li><a href="/" class="header__nav__list__text">Accueil</a></li>
-          <li>
-            <a href="/index.html#projets" class="header__nav__list__text"
-              >Projects</a
+          <li class="header__nav__list__items">
+            <a href="/" class="header__nav__list__items__text">Accueil</a>
+          </li>
+          <li class="header__nav__list__items">
+            <a href="/index.html#projets" class="header__nav__list__items__text"
+              >Mes Projets</a
             >
           </li>
-          <li>
-            <a href="/profil.html" class="header__nav__list__text">A Propos</a>
+          <li class="header__nav__list__items">
+            <a href="/profil.html" class="header__nav__list__items__text"
+              >A Propos</a
+            >
           </li>
-          <li>
-            <a href="/contact.html" class="header__nav__list__text">Contacts</a>
+          <li class="header__nav__list__items">
+            <a href="/contact.html" class="header__nav__list__items__text"
+              >Contacts</a
+            >
+          </li>
+        </ul>
+        <button class="header__nav__burger">
+          <ion-icon
+            name="menu-outline"
+            class="header__nav__burger__menu"
+          ></ion-icon>
+          <ion-icon
+            name="close-outline"
+            class="header__nav__burger__close"
+          ></ion-icon>
+        </button>
+        <ul class="header__nav__listburger">
+          <li class="header__nav__listburger__items">
+            <a href="/" class="header__nav__listburger__items__text">Accueil</a>
+          </li>
+          <li class="header__nav__listburger__items">
+            <a href="/index.html#projets" class="header__nav__listburger__items__text"
+              >Mes Projets</a
+            >
+          </li>
+          <li class="header__nav__listburger__items">
+            <a href="/profil.html" class="header__nav__listburger__items__text"
+              >A Propos</a
+            >
+          </li>
+          <li class="header__nav__listburger__items">
+            <a href="/contact.html" class="header__nav__listburger__items__text"
+              >Contacts</a
+            >
           </li>
         </ul>
       </nav>
@@ -60,45 +96,174 @@
         <div class="projects__gallery">
           <div class="projects__gallery__card">
             <div class="projects__gallery__card__img">
-              <img src="" alt="img-project" />
+              <img
+                src="./assets/img/projets/card_glacier.png"
+                alt="img-project"
+              />
             </div>
             <div class="projects__gallery__card__title">
-              <h3>Projet</h3>
+              <h3>Glacier La Manu</h3>
             </div>
-            <div class="projects__gallery__card__description">lorem</div>
+            <div class="projects__gallery__card__description">
+              Début sur les flexbox (HTML et CSS) pour un site vitrine à
+              l'attention d'une entreprise fictive de vendeur de glaces.
+            </div>
             <div class="projects__gallery__card__btn">
               <a href="/">
-                En voir plus
+                Voir le site
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
+            <div
+              class="projects__gallery__card__btn projects__gallery__card__btnsecondary"
+            >
+              <a href="/">
+                GitHub
                 <ion-icon name="arrow-forward-outline"></ion-icon>
               </a>
             </div>
           </div>
           <div class="projects__gallery__card">
             <div class="projects__gallery__card__img">
-              <img src="" alt="img-project" />
+              <img
+                src="./assets/img/projets/card_onepage.png"
+                alt="img-project"
+              />
             </div>
             <div class="projects__gallery__card__title">
-              <h3>Projet</h3>
+              <h3>Filmographie Star Wars</h3>
             </div>
-            <div class="projects__gallery__card__description">lorem</div>
+            <div class="projects__gallery__card__description">
+              Découverte du language HTML pour la création de la filmographie de
+              Star Wars.
+            </div>
             <div class="projects__gallery__card__btn">
               <a href="/">
-                En voir plus
+                Voir le site
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
+            <div
+              class="projects__gallery__card__btn projects__gallery__card__btnsecondary"
+            >
+              <a href="/">
+                GitHub
                 <ion-icon name="arrow-forward-outline"></ion-icon>
               </a>
             </div>
           </div>
           <div class="projects__gallery__card">
             <div class="projects__gallery__card__img">
-              <img src="" alt="img-project" />
+              <img
+                src="./assets/img/projets/card_typography.png"
+                alt="img-project"
+              />
             </div>
             <div class="projects__gallery__card__title">
-              <h3>Projet</h3>
+              <h3>Journal Harry Potter</h3>
             </div>
-            <div class="projects__gallery__card__description">lorem</div>
+            <div class="projects__gallery__card__description">
+              Création d'un journal Harry Potter pour s'entrainer avec
+              différentes typographies (HTML et CSS)
+            </div>
             <div class="projects__gallery__card__btn">
               <a href="/">
-                En voir plus
+                Voir le site
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
+            <div
+              class="projects__gallery__card__btn projects__gallery__card__btnsecondary"
+            >
+              <a href="/">
+                GitHub
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
+          </div>
+          <div class="projects__gallery__card">
+            <div class="projects__gallery__card__img">
+              <img
+                src="./assets/img/projets/card_glacier.png"
+                alt="img-project"
+              />
+            </div>
+            <div class="projects__gallery__card__title">
+              <h3>Glacier La Manu</h3>
+            </div>
+            <div class="projects__gallery__card__description">
+              Début sur les flexbox (HTML et CSS) pour un site vitrine à
+              l'attention d'une entreprise fictive de vendeur de glaces.
+            </div>
+            <div class="projects__gallery__card__btn">
+              <a href="/">
+                Voir le site
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
+            <div
+              class="projects__gallery__card__btn projects__gallery__card__btnsecondary"
+            >
+              <a href="/">
+                GitHub
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
+          </div>
+          <div class="projects__gallery__card">
+            <div class="projects__gallery__card__img">
+              <img
+                src="./assets/img/projets/card_glacier.png"
+                alt="img-project"
+              />
+            </div>
+            <div class="projects__gallery__card__title">
+              <h3>Glacier La Manu</h3>
+            </div>
+            <div class="projects__gallery__card__description">
+              Début sur les flexbox (HTML et CSS) pour un site vitrine à
+              l'attention d'une entreprise fictive de vendeur de glaces.
+            </div>
+            <div class="projects__gallery__card__btn">
+              <a href="/">
+                Voir le site
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
+            <div
+              class="projects__gallery__card__btn projects__gallery__card__btnsecondary"
+            >
+              <a href="/">
+                GitHub
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
+          </div>
+          <div class="projects__gallery__card">
+            <div class="projects__gallery__card__img">
+              <img
+                src="./assets/img/projets/card_glacier.png"
+                alt="img-project"
+              />
+            </div>
+            <div class="projects__gallery__card__title">
+              <h3>Glacier La Manu</h3>
+            </div>
+            <div class="projects__gallery__card__description">
+              Début sur les flexbox (HTML et CSS) pour un site vitrine à
+              l'attention d'une entreprise fictive de vendeur de glaces.
+            </div>
+            <div class="projects__gallery__card__btn">
+              <a href="/">
+                Voir le site
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
+            <div
+              class="projects__gallery__card__btn projects__gallery__card__btnsecondary"
+            >
+              <a href="/">
+                GitHub
                 <ion-icon name="arrow-forward-outline"></ion-icon>
               </a>
             </div>
@@ -108,11 +273,22 @@
     </main>
     <footer class="footer">
       <div class="footer__media">
-        <a href="#" target="_blank" class="footer__media__icon"
-          ><ion-icon name="logo-github"></ion-icon></a
-        ><a href="#" target="_blank" class="footer__media__icon"
-          ><ion-icon name="logo-linkedin"></ion-icon></a
-        ><a href="#" target="_blank" class="footer__media__icon"
+        <a
+          href="https://github.com/gthiroux"
+          target="_blank"
+          class="footer__media__icon"
+          ><ion-icon name="logo-github"></ion-icon
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/garance-thiroux-53b346260/"
+          target="_blank"
+          class="footer__media__icon"
+          ><ion-icon name="logo-linkedin"></ion-icon
+        ></a>
+        <a
+          href="mailto:thiroux.garance@gmail.com"
+          target="_blank"
+          class="footer__media__icon"
           ><ion-icon name="mail"></ion-icon
         ></a>
       </div>
@@ -121,6 +297,7 @@
         <p>Tous droits réservés. Développé par Garance Thiroux</p>
       </div>
     </footer>
+    <script src="assets/js/script.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"

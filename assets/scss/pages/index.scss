@@ -7,7 +7,7 @@
     gap: $large;
     &__left{
         width: 20%;
-        background:$primary ;
+        background:$green ;
     }
     &__right{
         width: 40%;
@@ -15,7 +15,7 @@
         flex-direction: column;
         h1{
             @include typo-bold ();
-            color: $primary;
+            color: $green;
         }
         h2{
             @include typo-light-italic();
@@ -28,7 +28,7 @@
         &__btn{
             width: 40%;
             height: 15%;
-            background-color: $primary;
+            background-color: $green;
             border-radius: $small;
             padding: $small;
             display: flex;
@@ -40,59 +40,123 @@
 }
 .projects {
   width: $full;
-  height: 91vh;
+  height: auto;
   padding: $medium;
-
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  &__title {
-    width: 75%;
+  &__title h2{
+    width: 100%;
     height: 15%;
+    display: flex;
+    justify-content: center;
+    margin-top: $medium;
+    @include typo-bold();
+    font-size: $large;
+    color: $brown;
+    text-decoration: underline $green;
   }
   &__gallery {
-    width: 90%;
+    width: $full;
     height: $full;
-    padding: $medium;
-    background-color: aqua;
+    padding: $large;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    gap: $medium;
+    gap: $small;
     &__card {
-      width: 25%;
-      height: 50%;
-      background: salmon;
-      padding: $small;
-      padding-top: $large;
+      width: 30%;
+      height: 24rem;
+      background: $brown;
+      border: solid 3px $green;
+      border-radius: $small;
+      color: $green;
+      margin-top:7%;
+      padding-top:8%;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1rem;
+      gap: $x-small;
       position: relative;
+      &:hover{
+        box-shadow: (6px  8px 6px $dark-green);
+
+      }
+      &__title h3{
+        @include typo-bold();
+      }
       &__img {
-        width: 5rem;
-        height: 5rem;
-        background: red;
+        width:12rem;
+        height: 10rem;
+        border: solid 3px $green;
+        border-radius: $small;
         position: absolute;
         top: 0;
         left: 50%;
-        transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-45%);
+         img{
+          width: 100%;
+          height: 100%;
+          border-radius: $small;
+         }
       }
       &__description {
         width: $full;
-        height: 50%;
+        height: 20%;
+        color:$white;
+        margin: 1rem;
         padding: 1rem;
         display: flex;
+        text-align: center;
       }
       &__btn {
-        width: 30%;
-        height: 10%;
-        padding: 1rem;
+        width: 60%;
+        height: 18%;
+        background: $green;
+        border-radius: $x-small;
+        margin: $x-small;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+          background: $dark-green;
+           box-shadow: (2px 2px 2px 2px $green);
+           a{
+            color:$white;
+           }
+  
+        }
+        a{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5%;
+          @include typo-bold();
+          color: $brown;
+         }
+         
       }
+      &__btnsecondary{
+          background: $light-green;
+          width: 30%;
+          height: 14%;
+      &:hover{
+        background: $light-green;
+        a{
+            color:$dark-green;
+            text-decoration: underline $dark-green;
+          
+          }
+      }
+        a{
+          color: $dark-green;
+          
+        }
+        }
     }
+    
   }
 }

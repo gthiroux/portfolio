@@ -1,0 +1,52 @@
+@use "../abstract/_shared.scss" as *;
+.skills {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    height: 10rem;
+    align-items: center;
+    gap: 200px;
+    padding: 0 calc(50vw - 150px);
+    //   margin:2rem;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    &__card {
+        flex: 0 0 26rem;
+        height: 6rem;
+        background: $green;
+        border-radius: $small;
+        box-shadow: 5px 0 10px $light-brown;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include typo-regular();
+        scroll-snap-align: center;
+
+        /* The View Timeline Animation */
+        animation: pop-in linear both;
+        animation-timeline: view(x);
+        }   
+}
+
+
+@keyframes pop-in {
+    0% {
+        transform: scale(0.5) rotate(-3deg);
+        opacity: 0.2;
+    }
+
+    50% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+
+    /* Center Point */
+    100% {
+        transform: scale(0.5) rotate(3deg);
+        opacity: 0.2;
+    }
+}
+

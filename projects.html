@@ -4,20 +4,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/pages/index.css" />
+    <link rel="stylesheet" href="assets/css/pages/profil.css" />
     <title>Portfolio</title>
   </head>
   <body>
-    <header class="header">
+   <header class="header">
       <nav class="header__nav">
         <div class="header__nav__logo img">
-          <!-- <img src="" alt="logo" /> -->
+          <!-- <img src="./assets/img/garance.png" alt="logo" /> -->
         </div>
         <ul class="header__nav__list">
-          <li><a href="/index.html" class="header__nav__list__text">Accueil</a></li>
-          <li><a href="/index.html#projects" class="header__nav__list__text">Projects</a></li>
-          <li><a href="/profil.html" class="header__nav__list__text">A Propos</a></li>
-          <li><a href="/contact.html" class="header__nav__list__text">Contacts</a></li>
+          <li class="header__nav__list__items">
+            <a href="/" class="header__nav__list__items__text">Accueil</a>
+          </li>
+          <li class="header__nav__list__items">
+            <a href="/index.html#projets" class="header__nav__list__items__text"
+              >Mes Projets</a
+            >
+          </li>
+          <li class="header__nav__list__items">
+            <a href="/profil.html" class="header__nav__list__items__text"
+              >A Propos</a
+            >
+          </li>
+          <li class="header__nav__list__items">
+            <a href="/contact.html" class="header__nav__list__items__text"
+              >Contacts</a
+            >
+          </li>
+        </ul>
+        <button class="header__nav__burger">
+          <ion-icon
+            name="menu-outline"
+            class="header__nav__burger__menu"
+          ></ion-icon>
+          <ion-icon
+            name="close-outline"
+            class="header__nav__burger__close"
+          ></ion-icon>
+        </button>
+        <ul class="header__nav__listburger">
+          <li class="header__nav__listburger__items">
+            <a href="/" class="header__nav__listburger__items__text">Accueil</a>
+          </li>
+          <li class="header__nav__listburger__items">
+            <a href="/index.html#projets" class="header__nav__listburger__items__text"
+              >Mes Projets</a
+            >
+          </li>
+          <li class="header__nav__listburger__items">
+            <a href="/profil.html" class="header__nav__listburger__items__text"
+              >A Propos</a
+            >
+          </li>
+          <li class="header__nav__listburger__items">
+            <a href="/contact.html" class="header__nav__listburger__items__text"
+              >Contacts</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
@@ -38,6 +82,7 @@
         <p>Tous droits réservés. Développé par Garance Thiroux</p>
       </div>
     </footer>
+    <script src="assets/js/script.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
