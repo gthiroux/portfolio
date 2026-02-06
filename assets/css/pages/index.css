@@ -1,6 +1,6 @@
 .presentation {
   width: 100%;
-  height: 20rem;
+  height: 16rem;
   display: flex;
   justify-content: center;
   gap: 3rem;
@@ -27,19 +27,27 @@
   margin-left: 1rem;
 }
 .presentation__right__description {
+  width: 80%;
   height: 60%;
   margin: 1rem;
+  text-align: justify;
 }
 .presentation__right__btn {
-  width: 40%;
+  max-width: 80%;
   height: 15%;
   background-color: #82CEB1;
   border-radius: 1rem;
   padding: 1rem;
   display: flex;
   justify-content: center;
+}
+.presentation__right__btn a {
+  display: flex;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
+  color: #4B3E34;
+  font-weight: 600;
 }
 
 .projects {
@@ -52,42 +60,56 @@
   align-items: center;
 }
 .projects__title h2 {
+  font-family: "Sansation", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   width: 100%;
   height: 15%;
   display: flex;
   justify-content: center;
   margin-top: 2rem;
-  font-family: "Sansation", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 3rem;
   color: #4B3E34;
   text-decoration: underline #82CEB1;
 }
 .projects__gallery {
   width: 100%;
-  height: 100%;
-  padding: 3rem;
+  height: 32rem;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: row;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
   align-items: center;
-  gap: 1rem;
+  padding: 0 calc(50vw - 150px);
+  margin: 2rem;
+  scrollbar-width: none;
+  gap: 3rem;
+}
+.projects__gallery::-webkit-scrollbar {
+  display: none;
 }
 .projects__gallery__card {
+  font-family: "Sansation", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   width: 30%;
   height: 24rem;
   background: #4B3E34;
   border: solid 3px #82CEB1;
   border-radius: 1rem;
-  color: #82CEB1;
-  margin-top: 7%;
-  padding-top: 8%;
+  margin-top: 5rem;
+  padding-top: 6rem;
   display: flex;
+  flex: 0 0 26rem;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 0.5rem;
   position: relative;
+  scroll-snap-align: center;
+  /* The View Timeline Animation */
+  animation: pop-in linear both;
+  animation-timeline: view(x);
 }
 .projects__gallery__card:hover {
   box-shadow: 6px 8px 6px #255F49;
@@ -96,20 +118,25 @@
   font-family: "Sansation", sans-serif;
   font-weight: 700;
   font-style: normal;
+  color: #82CEB1;
 }
 .projects__gallery__card__img {
   width: 12rem;
   height: 10rem;
+  background: #FCFCFC;
   border: solid 3px #82CEB1;
   border-radius: 1rem;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%) translateY(-45%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .projects__gallery__card__img img {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 80%;
   border-radius: 1rem;
 }
 .projects__gallery__card__description {
@@ -117,7 +144,7 @@
   height: 20%;
   color: #FCFCFC;
   margin: 1rem;
-  padding: 1rem;
+  padding: 0.4rem;
   display: flex;
   text-align: center;
 }
@@ -139,14 +166,14 @@
   color: #FCFCFC;
 }
 .projects__gallery__card__btn a {
+  font-family: "Sansation", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5%;
-  font-family: "Sansation", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #4B3E34;
 }
 .projects__gallery__card__btnsecondary {
@@ -163,6 +190,31 @@
 }
 .projects__gallery__card__btnsecondary a {
   color: #255F49;
+}
+@keyframes pop-in {
+  0% {
+    transform: scale(0.5) rotate(-3deg);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  /* Center Point */
+  100% {
+    transform: scale(0.5) rotate(3deg);
+    opacity: 0.2;
+  }
+}
+
+.disappear {
+  display: none;
+}
+
+.design {
+  height: 16rem;
+  padding-top: 4rem;
+  margin-top: 0;
 }
 
 /*# sourceMappingURL=index.css.map */

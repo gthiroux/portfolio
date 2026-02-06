@@ -1,47 +1,156 @@
-.skills {
-  display: flex;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  height: 10rem;
-  align-items: center;
-  gap: 200px;
-  padding: 0 calc(50vw - 150px);
-  scrollbar-width: none;
+h2 {
+  padding: 1rem;
+  font-family: "Sansation", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #4B3E34;
+  text-decoration: underline #82CEB1;
 }
-.skills::-webkit-scrollbar {
-  display: none;
-}
-.skills__card {
-  flex: 0 0 26rem;
-  height: 6rem;
-  background: #82CEB1;
-  border-radius: 1rem;
-  box-shadow: 5px 0 10px #A99484;
-  color: white;
+
+.presentation {
+  width: 100%;
+  height: 14rem;
   display: flex;
   justify-content: center;
+  gap: 3rem;
+}
+.presentation__left {
+  width: 20%;
+  background: #82CEB1;
+}
+.presentation__right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.presentation__right h1 {
+  font-family: "Sansation", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #82CEB1;
+}
+.presentation__right h2 {
+  font-family: "Sansation", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+.presentation__right__description {
+  width: 80%;
+  height: 60%;
+  margin: 1rem;
+  text-align: justify;
+}
+
+.hobbies {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin: 3rem;
+  margin-top: 2rem;
+}
+.hobbies__list {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+.hobbies__list__card {
+  width: 30%;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+}
+.hobbies__list__card__img {
+  width: 80%;
+  height: 80%;
+  margin: 1rem;
+}
+.hobbies__list__card__img img {
+  object-fit: cover;
+  border-radius: 1rem;
+  border: solid 3px #82CEB1;
+  width: 100%;
+  height: 100%;
+}
+.hobbies__list__card__content {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Sansation", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 2rem;
+  color: #82CEB1;
+}
+
+.soft-skills {
+  margin-top: 2rem;
+}
+
+.skills {
+  width: 100%;
+  height: 18rem;
+  display: flex;
+  align-items: center;
+}
+.skills__scroll {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+  width: auto;
+  height: 14rem;
+  align-items: center;
+  padding-top: calc(14rem - 100px);
+  scrollbar-width: none;
+}
+.skills__scroll::-webkit-scrollbar {
+  display: none;
+}
+.skills__scroll__items {
   font-family: "Sansation", sans-serif;
   font-weight: 400;
   font-style: normal;
+  flex: 0 0 10rem;
+  width: 18rem;
+  height: 3rem;
+  margin: 1rem;
+  gap: 1rem;
+  color: #82CEB1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
   scroll-snap-align: center;
   /* The View Timeline Animation */
   animation: pop-in linear both;
-  animation-timeline: view(x);
+  animation-timeline: view(y);
+}
+
+.design {
+  margin-left: 6rem;
+}
+
+.picto {
+  width: auto;
+  height: 100%;
 }
 
 @keyframes pop-in {
   0% {
-    transform: scale(0.5) rotate(-3deg);
+    transform: scale(0.5);
     opacity: 0.2;
   }
   50% {
-    transform: scale(1) rotate(0deg);
+    transform: scale(1);
     opacity: 1;
   }
   /* Center Point */
   100% {
-    transform: scale(0.5) rotate(3deg);
+    transform: scale(0.5);
     opacity: 0.2;
   }
 }

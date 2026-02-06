@@ -8,6 +8,9 @@
     list-style-type: none;
     @include typo-regular();
 }
+body{
+    background: $light-background;
+}
 
 .header{
     width: $full;

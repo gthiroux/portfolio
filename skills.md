@@ -10,4 +10,11 @@ php
 sql
 docker
 git
+WordPress
 
+blender
+unity
+figma
+Ai
+In
+Ps

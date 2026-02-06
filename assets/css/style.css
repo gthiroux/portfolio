@@ -9,6 +9,10 @@
   font-style: normal;
 }
 
+body {
+  background: #FCFCFC;
+}
+
 .header {
   width: 100%;
   height: 5rem;

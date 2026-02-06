@@ -1,51 +1,152 @@
 @use "../abstract/_shared.scss" as *;
-.skills {
-    display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    height: 10rem;
-    align-items: center;
-    gap: 200px;
-    padding: 0 calc(50vw - 150px);
-    //   margin:2rem;
-    scrollbar-width: none;
-    &::-webkit-scrollbar {
-        display: none;
-    }
-    &__card {
-        flex: 0 0 26rem;
-        height: 6rem;
-        background: $green;
-        border-radius: $small;
-        box-shadow: 5px 0 10px $light-brown;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        @include typo-regular();
-        scroll-snap-align: center;
 
-        /* The View Timeline Animation */
-        animation: pop-in linear both;
-        animation-timeline: view(x);
-        }   
+h2{
+    padding: $small;
+    @include typo-bold();
+    color: $brown;
+    text-decoration: underline $green;
+}
+.presentation{
+    width: $full;
+    height: 14rem;
+    display: flex;
+    justify-content: center;
+    gap: $large;
+    &__left{
+        width: 20%;
+        background:$green ;
+    }
+    &__right{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        h1{
+            @include typo-bold ();
+            color: $green;
+        }
+        h2{
+            @include typo-light-italic();
+            margin-left:$small;
+            text-decoration: none;
+        }
+        &__description{
+          width: 80%;
+          height: 60%;
+          margin: $small;
+          text-align: justify;
+        }
+        
+    }
+}
+.hobbies{
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    height: auto;
+    margin: $large;
+    margin-top: $medium;
+    // align-items: center;
+    &__list{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        &__card{
+            width: 30%;
+            gap:$medium;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &__img{
+                    width: 80%;
+                    height: 80%;
+                    margin: $small;
+                    & img{
+                        object-fit: cover;
+                        border-radius: $small;
+                        border: solid 3px $green;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            &__content{
+                display: flex;
+                flex-wrap: wrap;
+                @include typo-bold-italic();
+                font-size: $medium;
+                color:$green;
+                
+            } 
+        }
+    }
+    
 }
 
-
+.soft-skills{
+    margin-top:$medium;
+}
+.skills{
+    width: 100%;
+    height: 18rem;
+    display: flex;
+    align-items: center;
+    
+    &__scroll {
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        scroll-snap-type: y proximity;
+        width: auto;
+        height: 14rem;
+        align-items: center;
+        padding-top: calc(14rem - 100px);
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        &__items{
+            @include typo-regular();
+            flex: 0 0 10rem;
+            width:18rem;
+            height: $large;
+            margin:$small;
+            gap:$small;
+            color: $green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: $medium;
+            scroll-snap-align: center;
+    
+            /* The View Timeline Animation */
+            animation: pop-in linear both;
+            animation-timeline: view(y);
+            
+            }   
+           
+    }
+}
+.design{
+    margin-left: 6rem;
+}
+.picto{
+    width: auto;
+    height: 100%;
+}
 @keyframes pop-in {
     0% {
-        transform: scale(0.5) rotate(-3deg);
+        transform: scale(0.5);
         opacity: 0.2;
     }
 
     50% {
-        transform: scale(1) rotate(0deg);
+        transform: scale(1) ;
         opacity: 1;
     }
 
     /* Center Point */
     100% {
-        transform: scale(0.5) rotate(3deg);
+        transform: scale(0.5) ;
         opacity: 0.2;
     }
 }
