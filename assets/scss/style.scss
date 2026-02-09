@@ -71,15 +71,15 @@ body {
                 height: auto;
                 width: 20rem;
                 position: absolute;
-                top: 1rem;
-                right: 1rem;
+                top: $small;
+                right: $small;
                 z-index: 99;
                 background: $brown;
                 border-radius: $small;
                 border: solid 3px $green;
                 box-shadow: 5px 0 8px $light-brown, 0px 5px 8px $light-brown;
-                padding-top: 2rem;
-                padding-bottom: 2rem;
+                padding-top: $medium;
+                padding-bottom: $medium;
 
                 flex-direction: column;
                 justify-content: center;
@@ -99,9 +99,9 @@ body {
                 display: block;
                 position: absolute;
                 z-index: 100;
-                top: 1rem;
-                right: 1rem;
-                padding: 0.5rem;
+                top: $small;
+                right: $small;
+                padding: $x-small;
                 background: none;
                 border: none;
                 color: $green;

@@ -57,12 +57,12 @@
       text-align: justify;
 
       @include tablette {
-        width: 100%;
+        width: $full;
         height: 80%;
       }
 
       @include telephone {
-        width: calc(100% - 2rem);
+        width: calc($full - $medium);
       }
     }
 
@@ -85,7 +85,7 @@
       }
 
       @include tablette {
-        max-width: 100%;
+        max-width: $full;
       }
 
       a {
@@ -111,7 +111,7 @@
 
   &__title h2 {
     @include typo-bold();
-    width: 100%;
+    width: $full;
     height: 15%;
     display: flex;
     justify-content: center;
@@ -218,7 +218,7 @@
         width: $full;
         height: 20%;
         color: $white;
-        margin: 1rem;
+        margin: $small;
         padding: .4rem;
         display: flex;
         text-align: center;
@@ -246,7 +246,7 @@
 
         a {
           @include typo-bold();
-          width: 100%;
+          width: $full;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -307,6 +307,6 @@
 
 .design {
   height: 16rem;
-  padding-top: 4rem;
+  padding-top: $x-large;
   margin-top: 0;
 }

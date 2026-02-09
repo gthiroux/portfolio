@@ -64,12 +64,12 @@ h2 {
             text-align: justify;
 
             @include tablette {
-                width: 100%;
+                width: $full;
                 height: 80%;
             }
 
             @include telephone {
-                width: calc(100% - 2rem);
+                width: calc($full - $medium);
             }
         }
 
@@ -98,7 +98,7 @@ h2 {
             }
 
             @include tablette {
-                max-width: 100%;
+                max-width: $full;
             }
         }
 
@@ -108,13 +108,13 @@ h2 {
 .hobbies {
     display: flex;
     flex-direction: column;
-    width: calc(100% - 4rem);
+    width: calc($full - $large);
     height: auto;
     margin: $large;
     margin-top: $medium;
 
     &__list {
-        width: 100%;
+        width: $full;
         height: auto;
         display: flex;
 
@@ -132,7 +132,7 @@ h2 {
             align-items: center;
 
             @include telephone {
-                width: 100%;
+                width: $full;
                 gap: $small;
 
             }
@@ -146,8 +146,8 @@ h2 {
                     object-fit: cover;
                     border-radius: $small;
                     border: solid 3px $green;
-                    width: 100%;
-                    height: 100%;
+                    width: $full;
+                    height: $full;
                 }
             }
 
@@ -179,7 +179,7 @@ h2 {
 }
 
 .skills {
-    width: 100%;
+    width: $full;
     height: 18rem;
     display: flex;
     align-items: center;
@@ -241,7 +241,7 @@ h2 {
 
 .picto {
     width: auto;
-    height: 100%;
+    height: $full;
 }
 
 @keyframes pop-in {
