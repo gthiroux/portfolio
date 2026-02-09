@@ -9,19 +9,41 @@ h2 {
 
 .presentation {
   width: 100%;
-  height: 14rem;
+  height: auto;
   display: flex;
   justify-content: center;
   gap: 3rem;
+}
+@media screen and (max-width: 600px) {
+  .presentation {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .presentation__left {
   width: 20%;
   background: #82CEB1;
 }
+@media screen and (max-width: 1000px) {
+  .presentation__left {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .presentation__left {
+    width: 80%;
+    height: 10rem;
+  }
+}
 .presentation__right {
   width: 40%;
   display: flex;
   flex-direction: column;
+}
+@media screen and (max-width: 600px) {
+  .presentation__right {
+    width: 80%;
+  }
 }
 .presentation__right h1 {
   font-family: "Sansation", sans-serif;
@@ -36,17 +58,60 @@ h2 {
   margin-left: 1rem;
   text-decoration: none;
 }
+@media screen and (max-width: 1000px) {
+  .presentation__right h2 {
+    font-size: 1rem;
+  }
+}
 .presentation__right__description {
-  width: 80%;
+  width: 75%;
   height: 60%;
   margin: 1rem;
   text-align: justify;
+}
+@media screen and (max-width: 1000px) {
+  .presentation__right__description {
+    width: 100%;
+    height: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .presentation__right__description {
+    width: calc(100% - 2rem);
+  }
+}
+.presentation__right__btn {
+  max-width: 80%;
+  height: 15%;
+  background-color: #82CEB1;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4B3E34;
+  font-weight: 600;
+  gap: 1rem;
+}
+.presentation__right__btn ion-icon {
+  font-size: 26px;
+  margin-bottom: 0.3rem;
+}
+.presentation__right__btn:hover {
+  background-color: #255F49;
+  box-shadow: 6px 8px 6px #82CEB1;
+  color: #FCFCFC;
+}
+@media screen and (max-width: 1000px) {
+  .presentation__right__btn {
+    max-width: 100%;
+  }
 }
 
 .hobbies {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: calc(100% - 4rem);
   height: auto;
   margin: 3rem;
   margin-top: 2rem;
@@ -55,7 +120,13 @@ h2 {
   width: 100%;
   height: auto;
   display: flex;
-  flex-direction: row;
+}
+@media screen and (max-width: 600px) {
+  .hobbies__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 }
 .hobbies__list__card {
   width: 30%;
@@ -63,6 +134,12 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .hobbies__list__card {
+    width: 100%;
+    gap: 1rem;
+  }
 }
 .hobbies__list__card__img {
   width: 80%;
@@ -85,9 +162,16 @@ h2 {
   font-size: 2rem;
   color: #82CEB1;
 }
-
-.soft-skills {
-  margin-top: 2rem;
+.hobbies__list__card .content2 {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .hobbies__list__card .content1 {
+    display: none;
+  }
+  .hobbies__list__card .content2 {
+    display: flex;
+  }
 }
 
 .skills {
@@ -95,6 +179,12 @@ h2 {
   height: 18rem;
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 1000px) {
+  .skills {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 .skills__scroll {
   display: flex;
@@ -106,6 +196,11 @@ h2 {
   align-items: center;
   padding-top: calc(14rem - 100px);
   scrollbar-width: none;
+}
+@media screen and (max-width: 1000px) {
+  .skills__scroll {
+    align-self: center;
+  }
 }
 .skills__scroll::-webkit-scrollbar {
   display: none;
@@ -132,6 +227,11 @@ h2 {
 
 .design {
   margin-left: 6rem;
+}
+@media screen and (max-width: 1000px) {
+  .design {
+    margin-left: 0;
+  }
 }
 
 .picto {

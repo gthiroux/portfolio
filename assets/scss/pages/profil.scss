@@ -1,96 +1,194 @@
-@use "../abstract/_shared.scss" as *;
+@use "../abstract/_shared.scss"as *;
 
-h2{
+h2 {
     padding: $small;
     @include typo-bold();
     color: $brown;
     text-decoration: underline $green;
 }
-.presentation{
+
+.presentation {
     width: $full;
-    height: 14rem;
+    height: auto;
     display: flex;
     justify-content: center;
     gap: $large;
-    &__left{
-        width: 20%;
-        background:$green ;
+
+    @include telephone {
+        flex-direction: column;
+        align-items: center;
     }
-    &__right{
+
+    &__left {
+        width: 20%;
+        background: $green;
+
+        @include tablette {
+            width: 30%;
+        }
+
+        @include telephone {
+            width: 80%;
+            height: 10rem;
+        }
+    }
+
+    &__right {
         width: 40%;
         display: flex;
         flex-direction: column;
-        h1{
+
+        @include telephone {
+            width: 80%;
+        }
+
+        & h1 {
             @include typo-bold ();
             color: $green;
         }
-        h2{
+
+        & h2 {
             @include typo-light-italic();
-            margin-left:$small;
+            margin-left: $small;
             text-decoration: none;
+
+            @include tablette {
+                font-size: $small;
+            }
         }
-        &__description{
-          width: 80%;
-          height: 60%;
-          margin: $small;
-          text-align: justify;
+
+        &__description {
+            width: 75%;
+            height: 60%;
+            margin: $small;
+            text-align: justify;
+
+            @include tablette {
+                width: 100%;
+                height: 80%;
+            }
+
+            @include telephone {
+                width: calc(100% - 2rem);
+            }
         }
-        
+
+        &__btn {
+            max-width: 80%;
+            height: 15%;
+            background-color: $green;
+            border-radius: $small;
+            padding: $small;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $brown;
+            font-weight: 600;
+            gap: $small;
+
+            & ion-icon {
+                font-size: 26px;
+                margin-bottom: .3rem;
+            }
+
+            &:hover {
+                background-color: $dark-green;
+                box-shadow: (6px 8px 6px $green);
+                color: $white;
+            }
+
+            @include tablette {
+                max-width: 100%;
+            }
+        }
+
     }
 }
-.hobbies{
+
+.hobbies {
     display: flex;
-    flex-direction:column;
-    width: 100%;
+    flex-direction: column;
+    width: calc(100% - 4rem);
     height: auto;
     margin: $large;
     margin-top: $medium;
-    // align-items: center;
-    &__list{
+
+    &__list {
         width: 100%;
         height: auto;
         display: flex;
-        flex-direction: row;
-        &__card{
+
+        @include telephone {
+            flex-direction: column;
+            align-items: center;
+            gap: $medium;
+        }
+
+        &__card {
             width: 30%;
-            gap:$medium;
+            gap: $medium;
             display: flex;
             flex-direction: column;
             align-items: center;
-            &__img{
-                    width: 80%;
-                    height: 80%;
-                    margin: $small;
-                    & img{
-                        object-fit: cover;
-                        border-radius: $small;
-                        border: solid 3px $green;
-                        width: 100%;
-                        height: 100%;
-                    }
+
+            @include telephone {
+                width: 100%;
+                gap: $small;
+
+            }
+
+            &__img {
+                width: 80%;
+                height: 80%;
+                margin: $small;
+
+                & img {
+                    object-fit: cover;
+                    border-radius: $small;
+                    border: solid 3px $green;
+                    width: 100%;
+                    height: 100%;
                 }
-            &__content{
+            }
+
+            &__content {
                 display: flex;
                 flex-wrap: wrap;
                 @include typo-bold-italic();
                 font-size: $medium;
-                color:$green;
-                
-            } 
+                color: $green;
+
+            }
+
+            .content2 {
+                display: none;
+            }
+
+            @include telephone {
+                .content1 {
+                    display: none;
+                }
+
+                .content2 {
+                    display: flex;
+                }
+            }
         }
     }
-    
+
 }
 
-.soft-skills{
-    margin-top:$medium;
-}
-.skills{
+.skills {
     width: 100%;
     height: 18rem;
     display: flex;
     align-items: center;
-    
+
+    @include tablette {
+        flex-direction: column;
+        align-items: start;
+    }
+
     &__scroll {
         display: flex;
         flex-direction: column;
@@ -101,38 +199,51 @@ h2{
         align-items: center;
         padding-top: calc(14rem - 100px);
         scrollbar-width: none;
+
+        @include tablette {
+            align-self: center;
+        }
+
         &::-webkit-scrollbar {
             display: none;
         }
-        &__items{
+
+        &__items {
             @include typo-regular();
             flex: 0 0 10rem;
-            width:18rem;
+            width: 18rem;
             height: $large;
-            margin:$small;
-            gap:$small;
+            margin: $small;
+            gap: $small;
             color: $green;
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: $medium;
             scroll-snap-align: center;
-    
+
             /* The View Timeline Animation */
             animation: pop-in linear both;
             animation-timeline: view(y);
-            
-            }   
-           
+
+        }
+
     }
 }
-.design{
+
+.design {
     margin-left: 6rem;
+
+    @include tablette {
+        margin-left: 0;
+    }
 }
-.picto{
+
+.picto {
     width: auto;
     height: 100%;
 }
+
 @keyframes pop-in {
     0% {
         transform: scale(0.5);
@@ -140,14 +251,13 @@ h2{
     }
 
     50% {
-        transform: scale(1) ;
+        transform: scale(1);
         opacity: 1;
     }
 
     /* Center Point */
     100% {
-        transform: scale(0.5) ;
+        transform: scale(0.5);
         opacity: 0.2;
     }
 }
-

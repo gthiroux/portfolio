@@ -34,6 +34,11 @@ body {
   background-color: #82CEB1;
   border: 1px solid black;
 }
+@media screen and (max-width: 1000px) {
+  .header__nav__logo {
+    width: 50%;
+  }
+}
 .header__nav__list {
   width: 40%;
   margin: 3rem;
@@ -52,7 +57,7 @@ body {
 .header__nav__listburger__text {
   display: none;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1000px) {
   .header__nav__list {
     display: none;
   }
@@ -118,7 +123,7 @@ body {
   display: flex;
   justify-content: space-around;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 600px) {
   .footer__media {
     width: 80%;
   }
@@ -127,6 +132,14 @@ body {
   color: #82CEB1;
   font-size: 40px;
   margin: 0.5rem;
+}
+.footer__media .phone {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .footer__media .phone {
+    display: flex;
+  }
 }
 .footer__copyright {
   color: #FCFCFC;

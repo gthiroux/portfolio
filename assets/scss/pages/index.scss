@@ -1,52 +1,105 @@
-@use "../abstract/shared" as *;
+@use "../abstract/shared"as *;
 
-.presentation{
-    width: $full;
-    height: 16rem;
+.presentation {
+  width: $full;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  gap: $large;
+
+  @include telephone {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__left {
+    width: 20%;
+    background: $green;
+
+    @include tablette {
+      width: 30%;
+    }
+
+    @include telephone {
+      width: 80%;
+      height: 10rem;
+    }
+  }
+
+  &__right {
+    width: 40%;
     display: flex;
-    justify-content: center;
-    gap: $large;
-    &__left{
-        width: 20%;
-        background:$green ;
+    flex-direction: column;
+
+    @include telephone {
+      width: 80%;
     }
-    &__right{
-        width: 40%;
+
+    & h1 {
+      @include typo-bold ();
+      color: $green;
+    }
+
+    & h2 {
+      @include typo-light-italic();
+      margin-left: $small;
+      text-decoration: none;
+
+      @include tablette {
+        font-size: $small;
+      }
+    }
+
+    &__description {
+      width: 75%;
+      height: 60%;
+      margin: $small;
+      text-align: justify;
+
+      @include tablette {
+        width: 100%;
+        height: 80%;
+      }
+
+      @include telephone {
+        width: calc(100% - 2rem);
+      }
+    }
+
+    &__btn {
+      max-width: 80%;
+      height: 15%;
+      background-color: $green;
+      border-radius: $small;
+      padding: $small;
+      display: flex;
+      justify-content: center;
+
+      &:hover {
+        background-color: $dark-green;
+        box-shadow: (6px 8px 6px $green);
+
+        a {
+          color: $white;
+        }
+      }
+
+      @include tablette {
+        max-width: 100%;
+      }
+
+      a {
         display: flex;
-        flex-direction: column;
-        h1{
-            @include typo-bold ();
-            color: $green;
-        }
-        h2{
-            @include typo-light-italic();
-            margin-left:$small;
-        }
-        &__description{
-          width: 80%;
-          height: 60%;
-          margin: $small;
-          text-align: justify;
-        }
-        &__btn{
-            max-width:80% ;
-            height: 15%;
-            background-color: $green;
-            border-radius: $small;
-            padding: $small;
-            display: flex;
-            justify-content: center;
-            a{
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              gap: $small;
-              color:$brown;
-              font-weight: 600;
-            }
-        }
+        justify-content: center;
+        align-items: center;
+        gap: $small;
+        color: $brown;
+        font-weight: 600;
+      }
     }
+  }
 }
+
 .projects {
   width: $full;
   height: auto;
@@ -55,7 +108,8 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  &__title h2{
+
+  &__title h2 {
     @include typo-bold();
     width: 100%;
     height: 15%;
@@ -66,6 +120,22 @@
     color: $brown;
     text-decoration: underline $green;
   }
+
+  &__scroll {
+    display: none;
+
+    @include tablette {
+      @include typo-bold-italic();
+      font-size: $x-medium;
+      margin-top: $x-medium;
+      display: flex;
+      color: $green;
+      justify-content: center;
+      align-items: center;
+      gap: $small;
+    }
+  }
+
   &__gallery {
     width: $full;
     height: 32rem;
@@ -75,12 +145,18 @@
     scroll-snap-type: x mandatory;
     align-items: center;
     padding: 0 calc(50vw - 150px);
-    margin:2rem;
     scrollbar-width: none;
-    gap:$large;
-    &::-webkit-scrollbar {
-        display: none;
+    gap: $large;
+
+    @include telephone {
+      margin: $small;
+      gap: $medium;
     }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
     &__card {
       @include typo-regular();
       width: 30%;
@@ -88,8 +164,8 @@
       background: $brown;
       border: solid 3px $green;
       border-radius: $small;
-      margin-top:5rem;
-      padding-top:6rem;
+      margin-top: 5rem;
+      padding-top: 6rem;
       display: flex;
       flex: 0 0 26rem;
       flex-direction: column;
@@ -103,15 +179,22 @@
       animation: pop-in linear both;
       animation-timeline: view(x);
 
-      &:hover{
-        box-shadow: (6px  8px 6px $dark-green);
+      @include telephone {
+        flex: 0 0 18rem;
+        height: 26rem;
       }
-      &__title h3{
+
+      &:hover {
+        box-shadow: (6px 8px 6px $dark-green);
+      }
+
+      &__title h3 {
         @include typo-bold();
-        color:$green;
+        color: $green;
       }
+
       &__img {
-        width:12rem;
+        width: 12rem;
         height: 10rem;
         background: $white;
         border: solid 3px $green;
@@ -123,21 +206,24 @@
         display: flex;
         justify-content: center;
         align-items: center;
-         img{
+
+        img {
           width: 90%;
           height: 80%;
           border-radius: $small;
-         }
+        }
       }
+
       &__description {
         width: $full;
         height: 20%;
-        color:$white;
+        color: $white;
         margin: 1rem;
         padding: .4rem;
         display: flex;
         text-align: center;
       }
+
       &__btn {
         width: 60%;
         height: 18%;
@@ -147,15 +233,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        &:hover{
+
+        &:hover {
           background: $dark-green;
-           box-shadow: (2px 2px 2px 2px $green);
-           a{
-            color:$white;
-           }
-  
+          box-shadow: (2px 2px 2px 2px $green);
+
+          a {
+            color: $white;
+          }
+
         }
-        a{
+
+        a {
           @include typo-bold();
           width: 100%;
           display: flex;
@@ -163,52 +252,61 @@
           align-items: center;
           gap: 5%;
           color: $brown;
-         }
-         
+        }
+
       }
-      &__btnsecondary{
-          background: $light-green;
-          width: 30%;
-          height: 14%;
-      &:hover{
+
+      &__btnsecondary {
         background: $light-green;
-        a{
-            color:$dark-green;
+        width: 30%;
+        height: 14%;
+
+        @include tablette {
+          width: 50%;
+        }
+
+        &:hover {
+          background: $light-green;
+
+          a {
+            color: $dark-green;
             text-decoration: underline $dark-green;
-          
+
           }
-      }
-        a{
+        }
+
+        a {
           color: $dark-green;
-          
         }
-        }
+      }
     }
+
     @keyframes pop-in {
-            0% {
-                transform: scale(0.5) rotate(-3deg);
-                opacity: 0.2;
-            }
-        
-            50% {
-                transform: scale(1) rotate(0deg);
-                opacity: 1;
-            }
-        
-            /* Center Point */
-            100% {
-                transform: scale(0.5) rotate(3deg);
-                opacity: 0.2;
-            }
-        }
+      0% {
+        transform: scale(0.5) rotate(-3deg);
+        opacity: 0.2;
+      }
+
+      50% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+      }
+
+      /* Center Point */
+      100% {
+        transform: scale(0.5) rotate(3deg);
+        opacity: 0.2;
+      }
+    }
   }
 }
-.disappear{
+
+.disappear {
   display: none;
 }
-.design{
+
+.design {
   height: 16rem;
   padding-top: 4rem;
   margin-top: 0;
 }
-

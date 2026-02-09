@@ -1,4 +1,4 @@
-@use "_variables.scss" as *;
+@use "_variables.scss"as *;
 
 // typo
 @mixin typo-light {
@@ -6,34 +6,45 @@
   font-weight: 300;
   font-style: normal;
 }
+
 @mixin typo-regular {
-  font-family:$typo ;
+  font-family: $typo;
   font-weight: 400;
   font-style: normal;
 }
+
 @mixin typo-bold {
-  font-family:$typo ;
+  font-family: $typo;
   font-weight: 700;
   font-style: normal;
 }
+
 @mixin typo-light-italic {
-  font-family:$typo ;
+  font-family: $typo;
   font-weight: 300;
   font-style: italic;
 }
+
 @mixin typo-regular-italic {
-  font-family:$typo ;
+  font-family: $typo;
   font-weight: 400;
   font-style: italic;
 }
+
 @mixin typo-bold-italic {
-  font-family:$typo ;
+  font-family: $typo;
   font-weight: 700;
   font-style: italic;
 }
 
-@mixin telephone{
-  @media  screen and (max-width:1100px) {
-    @content
+@mixin tablette {
+  @media screen and (max-width:1000px) {
+    @content;
+  }
+}
+
+@mixin telephone {
+  @media screen and (max-width:600px) {
+    @content;
   }
 }

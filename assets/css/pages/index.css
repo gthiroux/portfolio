@@ -1,18 +1,40 @@
 .presentation {
   width: 100%;
-  height: 16rem;
+  height: auto;
   display: flex;
   justify-content: center;
   gap: 3rem;
+}
+@media screen and (max-width: 600px) {
+  .presentation {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .presentation__left {
   width: 20%;
   background: #82CEB1;
 }
+@media screen and (max-width: 1000px) {
+  .presentation__left {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .presentation__left {
+    width: 80%;
+    height: 10rem;
+  }
+}
 .presentation__right {
   width: 40%;
   display: flex;
   flex-direction: column;
+}
+@media screen and (max-width: 600px) {
+  .presentation__right {
+    width: 80%;
+  }
 }
 .presentation__right h1 {
   font-family: "Sansation", sans-serif;
@@ -25,12 +47,29 @@
   font-weight: 300;
   font-style: italic;
   margin-left: 1rem;
+  text-decoration: none;
+}
+@media screen and (max-width: 1000px) {
+  .presentation__right h2 {
+    font-size: 1rem;
+  }
 }
 .presentation__right__description {
-  width: 80%;
+  width: 75%;
   height: 60%;
   margin: 1rem;
   text-align: justify;
+}
+@media screen and (max-width: 1000px) {
+  .presentation__right__description {
+    width: 100%;
+    height: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .presentation__right__description {
+    width: calc(100% - 2rem);
+  }
 }
 .presentation__right__btn {
   max-width: 80%;
@@ -40,6 +79,18 @@
   padding: 1rem;
   display: flex;
   justify-content: center;
+}
+.presentation__right__btn:hover {
+  background-color: #255F49;
+  box-shadow: 6px 8px 6px #82CEB1;
+}
+.presentation__right__btn:hover a {
+  color: #FCFCFC;
+}
+@media screen and (max-width: 1000px) {
+  .presentation__right__btn {
+    max-width: 100%;
+  }
 }
 .presentation__right__btn a {
   display: flex;
@@ -72,6 +123,23 @@
   color: #4B3E34;
   text-decoration: underline #82CEB1;
 }
+.projects__scroll {
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  .projects__scroll {
+    font-family: "Sansation", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    display: flex;
+    color: #82CEB1;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
 .projects__gallery {
   width: 100%;
   height: 32rem;
@@ -81,9 +149,14 @@
   scroll-snap-type: x mandatory;
   align-items: center;
   padding: 0 calc(50vw - 150px);
-  margin: 2rem;
   scrollbar-width: none;
   gap: 3rem;
+}
+@media screen and (max-width: 600px) {
+  .projects__gallery {
+    margin: 1rem;
+    gap: 2rem;
+  }
 }
 .projects__gallery::-webkit-scrollbar {
   display: none;
@@ -110,6 +183,12 @@
   /* The View Timeline Animation */
   animation: pop-in linear both;
   animation-timeline: view(x);
+}
+@media screen and (max-width: 600px) {
+  .projects__gallery__card {
+    flex: 0 0 18rem;
+    height: 26rem;
+  }
 }
 .projects__gallery__card:hover {
   box-shadow: 6px 8px 6px #255F49;
@@ -180,6 +259,11 @@
   background: #E5F5EF;
   width: 30%;
   height: 14%;
+}
+@media screen and (max-width: 1000px) {
+  .projects__gallery__card__btnsecondary {
+    width: 50%;
+  }
 }
 .projects__gallery__card__btnsecondary:hover {
   background: #E5F5EF;

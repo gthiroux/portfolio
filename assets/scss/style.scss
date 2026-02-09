@@ -1,140 +1,169 @@
-@use "./abstract/shared" as *;
+@use "./abstract/shared"as *;
 
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
     @include typo-regular();
 }
-body{
+
+body {
     background: $light-background;
 }
 
-.header{
+.header {
     width: $full;
     height: 5rem;
     background-color: $brown;
     box-shadow: 1px 1px $small $x-small $green;
-    margin-bottom:$large ;
-    &__nav{
+    margin-bottom: $large;
+
+    &__nav {
         width: $full;
         height: $full;
         padding: $x-small;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        &__logo{
-           width: 30%; 
-           height: 80%;
-           background-color: $green;
-           border: 1px solid black;
+
+        &__logo {
+            width: 30%;
+            height: 80%;
+            background-color: $green;
+            border: 1px solid black;
+
+            @include tablette {
+                width: 50%;
+            }
         }
-        &__list{
+
+        &__list {
             width: 40%;
             margin: $large;
             display: flex;
             justify-content: space-between;
-            &__items__text{
+
+            &__items__text {
                 color: $light-green;
             }
         }
-        &__burger{
+
+        &__burger {
             display: none;
         }
-        &__listburger{
+
+        &__listburger {
             display: none;
-            &__text{
+
+            &__text {
                 display: none;
             }
         }
-       @include telephone(){
-        &__list{
-            display: none;
-        }
-        &__listburger{
-            height: auto;
-            width: 20rem;
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            z-index: 99;
-            background: $brown;
-            border-radius: $small;
-            border: solid 3px $green;
-            box-shadow: 5px 0 8px $light-brown, 0px 5px 8px $light-brown;
-            padding-top: 2rem;
-            padding-bottom: 2rem;
 
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            
-            &__items__text{
-                @include typo-regular();
-                font-size:$x-medium;
-                margin: $x-medium;
-                color:$light-green;
+        @include tablette() {
+            &__list {
+                display: none;
+            }
+
+            &__listburger {
+                height: auto;
+                width: 20rem;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                z-index: 99;
+                background: $brown;
+                border-radius: $small;
+                border: solid 3px $green;
+                box-shadow: 5px 0 8px $light-brown, 0px 5px 8px $light-brown;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                &__items__text {
+                    @include typo-regular();
+                    font-size: $x-medium;
+                    margin: $x-medium;
+                    color: $light-green;
+                    display: block;
+
+                }
+            }
+
+            &__burger {
                 display: block;
-                
-            }            
+                position: absolute;
+                z-index: 100;
+                top: 1rem;
+                right: 1rem;
+                padding: 0.5rem;
+                background: none;
+                border: none;
+                color: $green;
+                font-size: $medium;
+                cursor: pointer;
+
+                &__close {
+                    display: none;
+                }
+
+                .showMenu {
+                    transform: translateY(0);
+                }
             }
-         &__burger{
-            display: block;
-            position: absolute;
-            z-index: 100;
-            top:1rem;
-            right:1rem;
-            padding: 0.5rem;
-            background: none;            
-            border: none;
-            color: $green;
-            font-size: $medium;
-            cursor: pointer;
-            &__close{
-                display:none;
-            }
-        .showMenu{
-            transform: translateY(0);
-        }
-       }
         }
 
     }
 }
 
 
-.footer{
+.footer {
     width: $full;
     height: 10rem;
     background: $brown;
     // padding: $small;
     display: flex;
     flex-direction: column;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
-    gap:$x-small;
-    &__media{
+    gap: $x-small;
+
+    &__media {
         width: 40%;
         display: flex;
         justify-content: space-around;
-        @include telephone(){
-            width:80%; 
+
+        @include telephone() {
+            width: 80%;
             // &__icon{
             //     font-size:40px;
             // }
         }
-        &__icon{
-            color:$green;
+
+        &__icon {
+            color: $green;
             font-size: 40px;
             margin: $x-small;
         }
+
+        & .phone {
+            display: none;
+
+            @include telephone {
+                display: flex;
+            }
+        }
     }
-    &__copyright{
+
+    &__copyright {
         color: $white;
         display: flex;
-        flex-direction:column;
-        align-items:center ;
-   }
+        flex-direction: column;
+        align-items: center;
+    }
 }
