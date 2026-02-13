@@ -32,13 +32,19 @@ body {
             height: 100%;
             padding-left: $medium;
 
-            @include tablette {
-                width: 50%;
-            }
-
             & img {
                 height: 110%;
             }
+
+            @include tablette {
+                width: 50%;
+
+                & img {
+                    padding-left: $small;
+                }
+            }
+
+
         }
 
         &__list {
