@@ -6,7 +6,7 @@
     <link
       rel="shorcut icon"
       type="image/png"
-      href="assets/img/logo/garance.png"
+      href="assets/img/logo/gt-logo.png"
     />
 
     <!-- typo -->
@@ -25,7 +25,7 @@
    <header class="header">
       <nav class="header__nav">
         <div class="header__nav__logo img">
-          <!-- <img src="./assets/img/garance.png" alt="logo" /> -->
+          <img src="assets/img/logo/gt-logo.png" alt="logo" />
         </div>
         <ul class="header__nav__list">
           <li class="header__nav__list__items">
@@ -48,7 +48,14 @@
           </li>
         </ul>
         <button class="header__nav__burger">
-          +
+          <ion-icon
+            name="menu-outline"
+            class="header__nav__burger__menu"
+          ></ion-icon>
+          <ion-icon
+            name="close-outline"
+            class="header__nav__burger__close"
+          ></ion-icon>
         </button>
         <ul class="header__nav__listburger">
           <li class="header__nav__listburger__items">
@@ -76,7 +83,7 @@
     <main>
        <div class="presentation">
         <div class="presentation__left img">
-          <!-- <img src="" alt=" photo presentation"> -->
+          <img src="assets/img/logo/garance.png" alt="logo">
         </div>
         <div class="presentation__right">
           <h1>Garance Thiroux</h1>
@@ -122,12 +129,20 @@
               L'Asie
             </div>
           </div>
+          <div class="hobbies__list__card">
+            <div class="hobbies__list__card__content content1">
+              La lecture
+            </div>
+            <div class="hobbies__list__card__img">
+              <img src="assets/img/books.jpg" alt="picture of books">
+            </div>
+            <div class="hobbies__list__card__content content2">
+              La lecture
+            </div>
+          </div>
       </div>
     </div>
-      <!-- <div class="soft-skills">
-        <h2>Mes soft-skills : </h2>
 
-      </div> -->
       <div class="skills">
         <h2>Mes compétences en développement :</h2>
         <div class="skills__scroll dev">
@@ -172,6 +187,9 @@
           ><ion-icon name="logo-linkedin"></ion-icon></a
         ><a href="#" class="footer__media__icon"
           ><ion-icon name="mail"></ion-icon></ion-icon
+        ></a>
+        <a href="tel:0652023142" class="footer__media__icon phone"
+          ><ion-icon name="call-outline"></ion-icon
         ></a>
       </div>
       <div class="footer__copyright">

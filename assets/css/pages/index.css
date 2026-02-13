@@ -13,7 +13,11 @@
 }
 .presentation__left {
   width: 20%;
-  background: #82CEB1;
+  display: flex;
+  justify-content: center;
+}
+.presentation__left img {
+  height: 100%;
 }
 @media screen and (max-width: 1000px) {
   .presentation__left {

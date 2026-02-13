@@ -29,15 +29,16 @@ body {
   align-items: center;
 }
 .header__nav__logo {
-  width: 30%;
-  height: 80%;
-  background-color: #82CEB1;
-  border: 1px solid black;
+  height: 100%;
+  padding-left: 2rem;
 }
 @media screen and (max-width: 1000px) {
   .header__nav__logo {
     width: 50%;
   }
+}
+.header__nav__logo img {
+  height: 110%;
 }
 .header__nav__list {
   width: 40%;

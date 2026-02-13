@@ -18,11 +18,16 @@ h2 {
   .presentation {
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
   }
 }
 .presentation__left {
   width: 20%;
-  background: #82CEB1;
+  display: flex;
+  justify-content: center;
+}
+.presentation__left img {
+  height: 100%;
 }
 @media screen and (max-width: 1000px) {
   .presentation__left {
@@ -105,16 +110,22 @@ h2 {
 @media screen and (max-width: 1000px) {
   .presentation__right__btn {
     max-width: 100%;
+    margin: 1rem;
   }
 }
 
 .hobbies {
   display: flex;
   flex-direction: column;
-  width: calc(100% - 3rem);
+  width: 100%;
   height: auto;
   margin: 3rem;
   margin-top: 2rem;
+}
+@media screen and (max-width: 600px) {
+  .hobbies {
+    margin: 0;
+  }
 }
 .hobbies__list {
   width: 100%;
@@ -123,6 +134,7 @@ h2 {
 }
 @media screen and (max-width: 600px) {
   .hobbies__list {
+    width: 100%;
     flex-direction: column;
     align-items: center;
     gap: 2rem;

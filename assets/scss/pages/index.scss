@@ -14,10 +14,17 @@
 
   &__left {
     width: 20%;
-    background: $green;
+    display: flex;
+    justify-content: center;
+
+    & img {
+      height: 100%;
+    }
 
     @include tablette {
       width: 30%;
+
+
     }
 
     @include telephone {

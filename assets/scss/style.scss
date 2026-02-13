@@ -29,13 +29,15 @@ body {
         align-items: center;
 
         &__logo {
-            width: 30%;
-            height: 80%;
-            background-color: $green;
-            border: 1px solid black;
+            height: 100%;
+            padding-left: $medium;
 
             @include tablette {
                 width: 50%;
+            }
+
+            & img {
+                height: 110%;
             }
         }
 
@@ -126,7 +128,6 @@ body {
     width: $full;
     height: 10rem;
     background: $brown;
-    // padding: $small;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -140,9 +141,6 @@ body {
 
         @include telephone() {
             width: 80%;
-            // &__icon{
-            //     font-size:40px;
-            // }
         }
 
         &__icon {
