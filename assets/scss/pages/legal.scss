@@ -1,0 +1,70 @@
+@use "../abstract/shared" as *;
+
+body {
+  @include typo-regular();
+  background: $light-background;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 50%;
+  padding: $small $x-medium $large;
+
+  &__back {
+    display: inline-block;
+    font-size: 16px;
+    color: $dark-green;
+    text-decoration: none;
+    margin-bottom: $small;
+  }
+
+  h1 {
+    @include typo-bold();
+    color: $dark-brown;
+    text-decoration: underline solid $green;
+  }
+
+  &__updated {
+    font-size: 13px;
+    color: $dark-green;
+    margin-bottom: $medium;
+  }
+
+  h2 {
+    @include margin($x-medium, $small);
+    @include typo-bold();
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $dark-green;
+  }
+
+  p {
+    color: $black;
+    line-height: $x-medium;
+  }
+
+  a {
+    color: $dark-brown;
+  }
+
+  &__block {
+    background: $light-green;
+    border: 1px solid $green;
+    border-radius: 10px;
+    padding: $small $x-medium;
+    margin-bottom: $small;
+  }
+
+  &__highlight {
+    background: $brown;
+    border: 1px solid $dark-brown;
+    border-radius: 10px;
+    padding: $small $x-medium;
+    margin-bottom: $small;
+    & p {
+      color: $white;
+    }
+  }
+}

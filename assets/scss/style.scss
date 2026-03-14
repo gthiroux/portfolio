@@ -1,173 +1,179 @@
-@use "./abstract/shared"as *;
+@use "./abstract/shared" as *;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style-type: none;
-    @include typo-regular();
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  @include typo-regular();
 }
 
 body {
-    background: $light-background;
+  background: $light-background;
 }
 
 .header {
-    width: $full;
-    height: 5rem;
-    background-color: $brown;
-    box-shadow: 1px 1px $small $x-small $green;
-    margin-bottom: $large;
+  width: $full;
+  height: 5rem;
+  background-color: $brown;
+  box-shadow: 1px 1px $small $x-small $green;
+  margin-bottom: $large;
 
-    &__nav {
-        width: $full;
-        height: $full;
-        padding: $x-small;
-        display: flex;
-        justify-content: space-between;
+  &__nav {
+    width: $full;
+    height: $full;
+    padding: $x-small;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+      height: 100%;
+      padding-left: $medium;
+
+      & img {
+        height: 110%;
+      }
+
+      @include tablette {
+        width: 50%;
+
+        & img {
+          padding-left: $small;
+        }
+      }
+    }
+
+    &__list {
+      width: 40%;
+      margin: $large;
+      display: flex;
+      justify-content: space-between;
+
+      &__items__text {
+        color: $light-green;
+      }
+    }
+
+    &__burger {
+      display: none;
+    }
+
+    &__listburger {
+      display: none;
+
+      &__text {
+        display: none;
+      }
+    }
+
+    @include tablette() {
+      &__list {
+        display: none;
+      }
+
+      &__listburger {
+        height: auto;
+        width: 20rem;
+        position: absolute;
+        top: $small;
+        right: $small;
+        z-index: 99;
+        background: $brown;
+        border-radius: $small;
+        border: solid 3px $green;
+        box-shadow:
+          5px 0 8px $light-brown,
+          0px 5px 8px $light-brown;
+        padding-top: $medium;
+        padding-bottom: $medium;
+
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
 
-        &__logo {
-            height: 100%;
-            padding-left: $medium;
+        &__items__text {
+          @include typo-regular();
+          font-size: $x-medium;
+          margin: $x-medium;
+          color: $light-green;
+          display: block;
+        }
+      }
 
-            & img {
-                height: 110%;
-            }
+      &__burger {
+        display: block;
+        position: absolute;
+        z-index: 100;
+        top: $small;
+        right: $small;
+        padding: $x-small;
+        background: none;
+        border: none;
+        color: $green;
+        font-size: $medium;
+        cursor: pointer;
 
-            @include tablette {
-                width: 50%;
-
-                & img {
-                    padding-left: $small;
-                }
-            }
-
-
+        &__close {
+          display: none;
         }
 
-        &__list {
-            width: 40%;
-            margin: $large;
-            display: flex;
-            justify-content: space-between;
-
-            &__items__text {
-                color: $light-green;
-            }
+        .showMenu {
+          transform: translateY(0);
         }
-
-        &__burger {
-            display: none;
-        }
-
-        &__listburger {
-            display: none;
-
-            &__text {
-                display: none;
-            }
-        }
-
-        @include tablette() {
-            &__list {
-                display: none;
-            }
-
-            &__listburger {
-                height: auto;
-                width: 20rem;
-                position: absolute;
-                top: $small;
-                right: $small;
-                z-index: 99;
-                background: $brown;
-                border-radius: $small;
-                border: solid 3px $green;
-                box-shadow: 5px 0 8px $light-brown, 0px 5px 8px $light-brown;
-                padding-top: $medium;
-                padding-bottom: $medium;
-
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-
-                &__items__text {
-                    @include typo-regular();
-                    font-size: $x-medium;
-                    margin: $x-medium;
-                    color: $light-green;
-                    display: block;
-
-                }
-            }
-
-            &__burger {
-                display: block;
-                position: absolute;
-                z-index: 100;
-                top: $small;
-                right: $small;
-                padding: $x-small;
-                background: none;
-                border: none;
-                color: $green;
-                font-size: $medium;
-                cursor: pointer;
-
-                &__close {
-                    display: none;
-                }
-
-                .showMenu {
-                    transform: translateY(0);
-                }
-            }
-        }
-
+      }
     }
+  }
 }
 
-
 .footer {
+  width: $full;
+  height: auto;
+  padding: $medium;
+  background: $brown;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: $small;
+
+  &__media {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+
+    @include telephone() {
+      width: 80%;
+    }
+
+    &__icon {
+      color: $green;
+      font-size: 40px;
+      margin: $x-small;
+    }
+
+    & .phone {
+      display: none;
+
+      @include telephone {
+        display: flex;
+      }
+    }
+  }
+  &__legal {
     width: $full;
-    height: 10rem;
-    background: $brown;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    & a {
+      color: $white;
+    }
+  }
+  &__copyright {
+    color: $white;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    gap: $x-small;
-
-    &__media {
-        width: 40%;
-        display: flex;
-        justify-content: space-around;
-
-        @include telephone() {
-            width: 80%;
-        }
-
-        &__icon {
-            color: $green;
-            font-size: 40px;
-            margin: $x-small;
-        }
-
-        & .phone {
-            display: none;
-
-            @include telephone {
-                display: flex;
-            }
-        }
-    }
-
-    &__copyright {
-        color: $white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  }
 }

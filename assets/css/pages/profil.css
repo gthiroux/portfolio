@@ -3,8 +3,8 @@ h2 {
   font-family: "Sansation", sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #4B3E34;
-  text-decoration: underline #82CEB1;
+  color: #4b3e34;
+  text-decoration: underline #82ceb1;
 }
 
 .presentation {
@@ -54,7 +54,7 @@ h2 {
   font-family: "Sansation", sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #82CEB1;
+  color: #82ceb1;
 }
 .presentation__right h2 {
   font-family: "Sansation", sans-serif;
@@ -88,13 +88,13 @@ h2 {
 .presentation__right__btn {
   max-width: 80%;
   height: 15%;
-  background-color: #82CEB1;
+  background-color: #82ceb1;
   border-radius: 1rem;
   padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #4B3E34;
+  color: #4b3e34;
   font-weight: 600;
   gap: 1rem;
 }
@@ -103,9 +103,9 @@ h2 {
   margin-bottom: 0.3rem;
 }
 .presentation__right__btn:hover {
-  background-color: #255F49;
-  box-shadow: 6px 8px 6px #82CEB1;
-  color: #FCFCFC;
+  background-color: #255f49;
+  box-shadow: 6px 8px 6px #82ceb1;
+  color: #fcfcfc;
 }
 @media screen and (max-width: 1000px) {
   .presentation__right__btn {
@@ -161,7 +161,7 @@ h2 {
 .hobbies__list__card__img img {
   object-fit: cover;
   border-radius: 1rem;
-  border: solid 3px #82CEB1;
+  border: solid 3px #82ceb1;
   width: 100%;
   height: 100%;
 }
@@ -172,7 +172,7 @@ h2 {
   font-weight: 700;
   font-style: italic;
   font-size: 2rem;
-  color: #82CEB1;
+  color: #82ceb1;
 }
 .hobbies__list__card .content2 {
   display: none;
@@ -226,7 +226,7 @@ h2 {
   height: 3rem;
   margin: 1rem;
   gap: 1rem;
-  color: #82CEB1;
+  color: #82ceb1;
   display: flex;
   justify-content: center;
   align-items: center;

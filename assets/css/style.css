@@ -10,14 +10,14 @@
 }
 
 body {
-  background: #FCFCFC;
+  background: #fcfcfc;
 }
 
 .header {
   width: 100%;
   height: 5rem;
-  background-color: #4B3E34;
-  box-shadow: 1px 1px 1rem 0.5rem #82CEB1;
+  background-color: #4b3e34;
+  box-shadow: 1px 1px 1rem 0.5rem #82ceb1;
   margin-bottom: 3rem;
 }
 .header__nav {
@@ -32,13 +32,16 @@ body {
   height: 100%;
   padding-left: 2rem;
 }
+.header__nav__logo img {
+  height: 110%;
+}
 @media screen and (max-width: 1000px) {
   .header__nav__logo {
     width: 50%;
   }
-}
-.header__nav__logo img {
-  height: 110%;
+  .header__nav__logo img {
+    padding-left: 1rem;
+  }
 }
 .header__nav__list {
   width: 40%;
@@ -47,7 +50,7 @@ body {
   justify-content: space-between;
 }
 .header__nav__list__items__text {
-  color: #E5F5EF;
+  color: #e5f5ef;
 }
 .header__nav__burger {
   display: none;
@@ -69,10 +72,10 @@ body {
     top: 1rem;
     right: 1rem;
     z-index: 99;
-    background: #4B3E34;
+    background: #4b3e34;
     border-radius: 1rem;
-    border: solid 3px #82CEB1;
-    box-shadow: 5px 0 8px #A99484, 0px 5px 8px #A99484;
+    border: solid 3px #82ceb1;
+    box-shadow: 5px 0 8px #a99484, 0px 5px 8px #a99484;
     padding-top: 2rem;
     padding-bottom: 2rem;
     flex-direction: column;
@@ -85,7 +88,7 @@ body {
     font-style: normal;
     font-size: 1.5rem;
     margin: 1.5rem;
-    color: #E5F5EF;
+    color: #e5f5ef;
     display: block;
   }
   .header__nav__burger {
@@ -97,7 +100,7 @@ body {
     padding: 0.5rem;
     background: none;
     border: none;
-    color: #82CEB1;
+    color: #82ceb1;
     font-size: 2rem;
     cursor: pointer;
   }
@@ -111,13 +114,14 @@ body {
 
 .footer {
   width: 100%;
-  height: 10rem;
-  background: #4B3E34;
+  height: auto;
+  padding: 2rem;
+  background: #4b3e34;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 .footer__media {
   width: 40%;
@@ -130,7 +134,7 @@ body {
   }
 }
 .footer__media__icon {
-  color: #82CEB1;
+  color: #82ceb1;
   font-size: 40px;
   margin: 0.5rem;
 }
@@ -142,8 +146,17 @@ body {
     display: flex;
   }
 }
+.footer__legal {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.footer__legal a {
+  color: #fcfcfc;
+}
 .footer__copyright {
-  color: #FCFCFC;
+  color: #fcfcfc;
   display: flex;
   flex-direction: column;
   align-items: center;

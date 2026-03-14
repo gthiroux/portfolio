@@ -1,4 +1,4 @@
-@use "_variables.scss"as *;
+@use "_variables.scss" as *;
 
 // typo
 @mixin typo-light {
@@ -36,15 +36,17 @@
   font-weight: 700;
   font-style: italic;
 }
-
+@mixin margin($top: 0, $bottom: 0, $right: 0, $left: 0) {
+  margin: $top $right $bottom $left;
+}
 @mixin tablette {
-  @media screen and (max-width:1000px) {
+  @media screen and (max-width: 1000px) {
     @content;
   }
 }
 
 @mixin telephone {
-  @media screen and (max-width:600px) {
+  @media screen and (max-width: 600px) {
     @content;
   }
 }
